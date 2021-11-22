@@ -1,1 +1,35 @@
-пне
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+
+namespace Program
+{
+    class Pro
+    {
+        static void Main(string[] args)
+        {
+            double x, s, y, a, p, d, ch, zn;
+            int n, k;
+            Console.WriteLine(" Enter x:");
+            x = double.Parse(Console.ReadLine());
+            k = 0; s = 0; p = 1; n = 1; d = 1; a = -1;
+            while (Math.Abs(a) >= 0.000001)
+            {
+                s += a;
+                ch = Math.Pow(-1, (n - 1)) * d; ///x^(n-1)
+                p *= n;
+                zn = 2 * p; ///2n!
+                a = ch;
+                d *= Math.Pow(x, (2 * n));// X^2n
+                n += 1;
+                k++;
+                Console.WriteLine("\t Iteration #{0} \n a={1}  s={2} \n", k, a, s);
+            }
+            y = Math.Asin(x*x);
+            Console.WriteLine("\t y = {0} \n", y);
+            string rep = Console.ReadLine();
+        }
+    }
+}
