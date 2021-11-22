@@ -27,7 +27,7 @@ namespace Program
                 k++;
                 Console.WriteLine("\t Iteration #{0} \n a={1}  s={2} \n", k, a, s);
             }
-            y = Math.Asin(x*x);
+            y = Math.Sin(x) * Math.Sin(x);
             Console.WriteLine("\t y = {0} \n", y);
             string rep = Console.ReadLine();
         }
