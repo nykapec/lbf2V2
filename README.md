@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +13,10 @@ namespace laba1
             StreamWriter p = new StreamWriter("rez.txt");
             float a, x, y;
             p.WriteLine("Результат");
-            for (a = 1; a <= 2; a += 0.5f)
+            for (a = 0.2f; a <= 0.4; a += 0.1f)
             {
                 p.WriteLine("a=" + a);
-                for (x = 1; x <= 7; x += 0.25f)
+                for (x = 0; x <= 2; x += 0.05f)
                 {
                     y = (float)(1 / Math.Sqrt(Math.Pow(1 - x * x, 1 / 2) + 4 * a * a * x * x));
                     p.WriteLine(" x= " + x + '\t' + " y= " + y);
