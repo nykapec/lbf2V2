@@ -20,9 +20,10 @@ namespace laba1
                 {
                     y = (float)(1 / Math.Sqrt(Math.Pow(1 - x * x, 1 / 2) + 4 * a * a * x * x));
                     p.WriteLine(" x= " + x + '\t' + " y= " + y);
-                    p.Close();
+                   
                 }
             }
-        }        
+            p.Close();
+        }
     }
 }
